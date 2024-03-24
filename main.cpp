@@ -4,26 +4,18 @@ using namespace std;
 
 int main()
 {
+	/* ****************************
+	// Complete this code.
+	*************************** */
 	int prev, current;
-    bool a1 = true;
+	int flag = 1;
 
-    while (true) {
-        int current;
-        cout << "Enter an integer: ";
-        cin >> current;
-
-        if (a1) {
-            prev = current;
-            a1 = false;
-        } else {
-            if (current < prev) {
-                cout << current << " ";
-            } else {
-                cout << endl;
-                break;
-            }
-        }
-
-        prev = current;
-    }
+	cin >> current;
+	while ((flag == 1) or (prev > current))
+	{
+		flag = 0;
+		cout << current << "\t";
+		prev = current;
+		cin >> current;
+	}
 }
